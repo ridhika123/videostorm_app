@@ -15,16 +15,16 @@ with st.container():
 # Loading in data 
 main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Behavior', 'Apparel and Jewelry Behavior', 'Automotive Behavior', 
                 'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior')
-household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
-insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
-alcohol_behavior = pd.read_excel('data.xlsx', sheet_name = 'alcohol_behavior')
-apparel_and_jewelry = pd.read_excel('data.xlsx', sheet_name = 'apparel_and_jewelry')
-automative_behavior = pd.read_excel('data.xlsx', sheet_name = 'automative_behavior')
-commuting = pd.read_excel('data.xlsx', sheet_name = 'commuting')
-videos = pd.read_excel('data.xlsx', sheet_name = 'videos')
-environment = pd.read_excel('data.xlsx', sheet_name = 'environment')
-financial = pd.read_excel('data.xlsx', sheet_name = 'financial')
-food_and_beverages = pd.read_excel('data.xlsx', sheet_name = 'food_and_beverages')
+household_demo = pd.read_csv('data.csv', sheet_name = 'household_demo')
+insurance_behavior = pd.read_csv('data.csv', sheet_name = 'insurance_behavior')
+alcohol_behavior = pd.read_csv('data.csv', sheet_name = 'alcohol_behavior')
+apparel_and_jewelry = pd.read_csv('data.csv', sheet_name = 'apparel_and_jewelry')
+automative_behavior = pd.read_csv('data.csv', sheet_name = 'automative_behavior')
+commuting = pd.read_csv('data.csv', sheet_name = 'commuting')
+videos = pd.read_csv('data.csv', sheet_name = 'videos')
+environment = pd.read_csv('data.csv', sheet_name = 'environment')
+financial = pd.read_csv('data.csv', sheet_name = 'financial')
+food_and_beverages = pd.read_csv('data.csv', sheet_name = 'food_and_beverages')
 
 # Code for each container and its three columns
 def each_container(count):
