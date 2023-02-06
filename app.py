@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+
+conda install -c anaconda openpyxl
 import openpyxl
 
 st.title('Targeting Taxonomies')
