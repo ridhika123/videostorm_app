@@ -19,7 +19,7 @@ with st.container():
 # Loading in data 
 main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Behavior', 'Apparel and Jewelry Behavior', 'Automotive Behavior', 
                 'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior')
-df = pd.read_excel('data.xlsx')
+df = pd.read_csv('data.csv')
 # household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
 # insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
 # alcohol_behavior = pd.read_csv('data.csv', sheet_name = 'alcohol_behavior')
