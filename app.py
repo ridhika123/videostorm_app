@@ -19,7 +19,8 @@ with st.container():
 # Loading in data 
 main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Behavior', 'Apparel and Jewelry Behavior', 'Automotive Behavior', 
                 'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior',
-                'Health Behavior', 'Home Improvement Behavior', 'Items in Home')
+                'Health Behavior', 'Home Improvement Behavior', 'Items in Home', 
+                'Magazines and Newspaper Behavior', 'Voting Behavior', 'Travel Behavior', 'Print Media Usage & Alternative Advertising')
 # df = pd.read_excel('household_demo.xlsx')
 household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
 insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
@@ -34,6 +35,10 @@ food_and_beverages = pd.read_excel('data.xlsx', sheet_name = 'food_and_beverages
 health = pd.read_excel('data.xlsx', sheet_name = 'health')
 home_improvement = pd.read_excel('data.xlsx', sheet_name = 'home_improvement')
 home_items = pd.read_excel('data.xlsx', sheet_name = 'home_items')
+magazine_newspaper = pd.read_excel('data.xlsx', sheet_name = 'magazine_newspaper')
+voting = pd.read_excel('data.xlsx', sheet_name = 'voting')
+travel = pd.read_excel('data.xlsx', sheet_name = 'travel')
+advertising = pd.read_excel('data.xlsx', sheet_name = 'advertising')
 
 # alcohol_behavior = pd.read_csv('data.csv', sheet_name = 'alcohol_behavior')
 # apparel_and_jewelry = pd.read_csv('data.csv', sheet_name = 'apparel_and_jewelry')
@@ -86,6 +91,14 @@ def each_container(count):
                 sub_category = (home_improvement['Main'].dropna())
             elif option1 == "Items in Home":
                 sub_category = (home_items['Main'].dropna())
+            elif option1 == "Magazines and Newspaper Behavior": 
+                sub_category = (magazine_newspaper['Main'].dropna())
+            elif option1 == "Voting Behavior":
+                sub_category = (voting['Main'].dropna())
+            elif option1 == "Travel Behavior":
+                sub_category = (travel['Main'].dropna())
+            elif option1 == "Print Media Usage & Alternative Advertising":
+                sub_category = (advertising['Main'].dropna())
         
             option2 = st.selectbox(
                 'And a subfield within the field:',
@@ -122,6 +135,14 @@ def each_container(count):
                     st.table(home_improvement[option2].dropna())
                 elif option1 == "Items in Home":
                     st.table(home_items[option2].dropna())
+                elif option1 == "Magazines and Newspaper Behavior":
+                    st.table(magazine_newspaper[option2].dropna())
+                elif option1 == "Voting Behavior":
+                    st.table(voting[option2].dropna())
+                elif option1 == "Travel Behavior":
+                    st.table(travel[option2].dropna())
+                elif option1 == "Print Media Usage & Alternative Advertising":
+                    st.table(advertising[option2].dropna())
 
         add_field = st.checkbox('Add another field?', key = count)
         count += 1
