@@ -18,7 +18,8 @@ with st.container():
 
 # Loading in data 
 main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Behavior', 'Apparel and Jewelry Behavior', 'Automotive Behavior', 
-                'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior')
+                'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior',
+                'Health Behavior', 'Home Improvement Behavior', 'Items in Home')
 # df = pd.read_excel('household_demo.xlsx')
 household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
 insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
@@ -30,6 +31,9 @@ videos = pd.read_excel('data.xlsx', sheet_name = 'videos')
 environment = pd.read_excel('data.xlsx', sheet_name = 'environment')
 financial = pd.read_excel('data.xlsx', sheet_name = 'financial')
 food_and_beverages = pd.read_excel('data.xlsx', sheet_name = 'food_and_beverages')
+health = pd.read_excel('data.xlsx', sheet_name = 'health')
+home_improvement = pd.read_excel('data.xlsx', sheet_name = 'home_improvement')
+home_items = pd.read_excel('data.xlsx', sheet_name = 'home_items')
 
 # alcohol_behavior = pd.read_csv('data.csv', sheet_name = 'alcohol_behavior')
 # apparel_and_jewelry = pd.read_csv('data.csv', sheet_name = 'apparel_and_jewelry')
@@ -76,6 +80,12 @@ def each_container(count):
                 sub_category = (financial['Main'].dropna())
             elif option1 == "Food and Beverages Behavior":
                 sub_category = (food_and_beverages['Main'].dropna())
+            elif option1 == "Health Behavior":
+                sub_category = (health['Main'].dropna())
+            elif option1 == "Home Improvement Behavior":
+                sub_category = (home_improvement['Main'].dropna())
+            elif option1 == "Items in Home":
+                sub_category = (home_items['Main'].dropna())
         
             option2 = st.selectbox(
                 'And a subfield within the field:',
@@ -106,6 +116,12 @@ def each_container(count):
                     st.table(financial[option2].dropna())
                 elif option1 == "Food and Beverages Behavior":
                     st.table(food_and_beverages[option2].dropna())
+                elif option1 == "Health Behavior":
+                    st.table(health[option2].dropna())
+                elif option1 == "Home Improvement Behavior":
+                    st.table(home_improvement[option2].dropna())
+                elif option1 == "Items in Home":
+                    st.table(home_items[option2].dropna())
 
         add_field = st.checkbox('Add another field?', key = count)
         count += 1
