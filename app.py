@@ -20,7 +20,8 @@ with st.container():
 main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Behavior', 'Apparel and Jewelry Behavior', 'Automotive Behavior', 
                 'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior',
                 'Health Behavior', 'Home Improvement Behavior', 'Items in Home', 
-                'Magazines and Newspaper Behavior', 'Voting Behavior', 'Travel Behavior', 'Print Media Usage & Alternative Advertising')
+                'Magazines and Newspaper Behavior', 'Voting Behavior', 'Travel Behavior', 'Print Media Usage & Alternative Advertising',
+                'Neighborhood Demographics')
 # df = pd.read_excel('household_demo.xlsx')
 household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
 insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
@@ -39,6 +40,7 @@ magazine_newspaper = pd.read_excel('data.xlsx', sheet_name = 'magazine_newspaper
 voting = pd.read_excel('data.xlsx', sheet_name = 'voting')
 travel = pd.read_excel('data.xlsx', sheet_name = 'travel')
 advertising = pd.read_excel('data.xlsx', sheet_name = 'advertising')
+neighborhood = pd.read_excel('data.xlsx', sheet_name = 'neighborhood')
 
 # alcohol_behavior = pd.read_csv('data.csv', sheet_name = 'alcohol_behavior')
 # apparel_and_jewelry = pd.read_csv('data.csv', sheet_name = 'apparel_and_jewelry')
@@ -99,6 +101,8 @@ def each_container(count):
                 sub_category = (travel['Main'].dropna())
             elif option1 == "Print Media Usage & Alternative Advertising":
                 sub_category = (advertising['Main'].dropna())
+            elif option1 == "Neighborhood Demographics":
+                sub_category = (advertising['Main'].dropna())
         
             option2 = st.selectbox(
                 'And a subfield within the field:',
@@ -142,6 +146,8 @@ def each_container(count):
                 elif option1 == "Travel Behavior":
                     st.table(travel[option2].dropna())
                 elif option1 == "Print Media Usage & Alternative Advertising":
+                    st.table(advertising[option2].dropna())
+                elif option1 == "Neighborhood Demographics":
                     st.table(advertising[option2].dropna())
 
         add_field = st.checkbox('Add another field?', key = count)
