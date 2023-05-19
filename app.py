@@ -23,6 +23,7 @@ main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Beha
                 'Magazines and Newspaper Behavior', 'Voting Behavior', 'Travel Behavior', 'Print Media Usage & Alternative Advertising',
                 'Neighborhood Demographics', 'Psychographics', 'Radio Behavior', 'Restaurants Behavior', 'Retail Shopping Behavior',
                 'Sports and Leisure Behavior', 'Telecommunications Behavior')
+
 # df = pd.read_excel('household_demo.xlsx')
 household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
 insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
@@ -190,96 +191,7 @@ def each_container(count):
 
 add_field = True
 count = 0
-max_containers = 100
+max_containers = 300 # variable - can change
 for i in range(max_containers):
     if add_field: 
         add_field, count = each_container(count)
-
-########## first code
-# with st.container():
-#     col1, col2, col3 = st.columns((2,2,2))
-#     # st.write(household_demo[0])
-#     # st.table(household_demo)
-
-#     with col1: 
-#         option1 = st.selectbox(
-#             'Please select a field:',
-#             main_category,
-#             key = count)
-#         count += 1
-
-#     with col2: 
-
-#         if option1 == "":
-#             sub_category = ('')
-#         elif option1 == "Household demographic":
-#             sub_category = (household_demo['Main'].dropna())
-#         elif option1 == "Insurance Behavior":
-#             sub_category = (insurance_behavior['Main'].dropna())
-     
-#         option2 = st.selectbox(
-#             'And a subfield within the field:',
-#             sub_category,
-#             key = count)
-#         # st.write('You selected:', option2)
-#         count += 1 
-
-#     with col3: 
-#         if option2:
-#             if option1 == "Household demographic":
-#                 st.table(household_demo[option2].dropna())
-#             elif option1 == "Insurance Behavior":
-#                 st.table(insurance_behavior[option2].dropna())
-
-#     add_field = st.checkbox('Add another field?', key = count)
-#     count += 1
-
-########## second code
-# if add_field: 
-#     add_field, count = each_container(count)
-
-########## first code
-# if add_field:
-#     with st.container():
-#         col1, col2, col3 = st.columns((2,2,2))
-#         # st.write(household_demo[0])
-#         # st.table(household_demo)
-
-#         with col1: 
-#             option1 = st.selectbox(
-#                 'Please select a field:',
-#                 main_category,
-#                 key = count)
-#             count += 1
-
-#         with col2: 
-
-#             if option1 == "":
-#                 sub_category = ('')
-#             elif option1 == "Household demographic":
-#                 sub_category = (household_demo['Main'].dropna())
-#             elif option1 == "Insurance Behavior":
-#                 sub_category = (insurance_behavior['Main'].dropna())
-        
-#             option2 = st.selectbox(
-#                 'And a subfield within the field:',
-#                 sub_category,
-#                 key = count)
-#             # st.write('You selected:', option2)
-#             count += 1 
-
-#         with col3: 
-#             if option2:
-#                 if option1 == "Household demographic":
-#                     st.table(household_demo[option2].dropna())
-#                 elif option1 == "Insurance Behavior":
-#                     st.table(insurance_behavior[option2].dropna())
-
-#         add_field = st.checkbox('Add another field?', key = count)
-#         count += 1
-
-###############################################################################################################################
-    # option3 = st.radio(
-    # 'What are your favorite colors',
-    # ['Green', 'Yellow', 'Red', 'Blue'])
-    # st.write('You selected:', option3)
