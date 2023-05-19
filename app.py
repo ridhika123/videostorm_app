@@ -21,7 +21,8 @@ main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Beha
                 'Commuting Behavior', 'Video Consumption Behavior', 'Environment-related Behavior', 'Financial Behavior', 'Food and Beverages Behavior',
                 'Health Behavior', 'Home Improvement Behavior', 'Items in Home', 
                 'Magazines and Newspaper Behavior', 'Voting Behavior', 'Travel Behavior', 'Print Media Usage & Alternative Advertising',
-                'Neighborhood Demographics')
+                'Neighborhood Demographics', 'Psychographics', 'Radio Behavior', 'Restaurants Behavior', 'Retail Shopping Behavior',
+                'Sports and Leisure Behavior', 'Telecommunications Behavior')
 # df = pd.read_excel('household_demo.xlsx')
 household_demo = pd.read_excel('data.xlsx', sheet_name = 'household_demo')
 insurance_behavior = pd.read_excel('data.xlsx', sheet_name = 'insurance_behavior')
@@ -41,6 +42,12 @@ voting = pd.read_excel('data.xlsx', sheet_name = 'voting')
 travel = pd.read_excel('data.xlsx', sheet_name = 'travel')
 advertising = pd.read_excel('data.xlsx', sheet_name = 'advertising')
 neighborhood = pd.read_excel('data.xlsx', sheet_name = 'neighborhood')
+psychographics = pd.read_excel('data.xlsx', sheet_name = 'psychographics')
+radio = pd.read_excel('data.xlsx', sheet_name = 'radio')
+restaurants = pd.read_excel('data.xlsx', sheet_name = 'restaurants')
+shopping = pd.read_excel('data.xlsx', sheet_name = 'shopping')
+sports = pd.read_excel('data.xlsx', sheet_name = 'sports')
+telecom = pd.read_excel('data.xlsx', sheet_name = 'telecom')
 
 # alcohol_behavior = pd.read_csv('data.csv', sheet_name = 'alcohol_behavior')
 # apparel_and_jewelry = pd.read_csv('data.csv', sheet_name = 'apparel_and_jewelry')
@@ -102,7 +109,19 @@ def each_container(count):
             elif option1 == "Print Media Usage & Alternative Advertising":
                 sub_category = (advertising['Main'].dropna())
             elif option1 == "Neighborhood Demographics":
-                sub_category = (advertising['Main'].dropna())
+                sub_category = (neighborhood['Main'].dropna())
+            elif option1 == "Psychographics":
+                sub_category = (psychographics['Main'].dropna())
+            elif option1 == "Radio Behavior":
+                sub_category = (radio['Main'].dropna())
+            elif option1 == "Restaurants Behavior":
+                sub_category = (restaurants['Main'].dropna())
+            elif option1 == "Retail Shopping Behavior":
+                sub_category = (shopping['Main'].dropna())
+            elif option1 == "Sports and Leisure Behavior":
+                sub_category = (sports['Main'].dropna())
+            elif option1 == "Telecommunications Behavior":
+                sub_category = (telecom['Main'].dropna())
         
             option2 = st.selectbox(
                 'And a subfield within the field:',
@@ -148,7 +167,19 @@ def each_container(count):
                 elif option1 == "Print Media Usage & Alternative Advertising":
                     st.table(advertising[option2].dropna())
                 elif option1 == "Neighborhood Demographics":
-                    st.table(advertising[option2].dropna())
+                    st.table(neighborhood[option2].dropna())
+                elif option1 == "Psychographics":
+                    st.table(psychographics[option2].dropna())
+                elif option1 == "Radio Behavior":
+                    st.table(radio[option2].dropna())
+                elif option1 == "Restaurants Behavior":
+                    st.table(restaurants[option2].dropna())
+                elif option1 == "Retail Shopping Behavior":
+                    st.table(shopping[option2].dropna())
+                elif option1 == "Sports and Leisure Behavior":
+                    st.table(sports[option2].dropna())
+                elif option1 == "Telecommunications Behavior":
+                    st.table(telecom[option2].dropna())
 
         add_field = st.checkbox('Add another field?', key = count)
         count += 1
