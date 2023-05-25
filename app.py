@@ -14,7 +14,7 @@ with st.container():
 
     col1.header('Main Field')
     col2.header('Sub Field')
-    col3.header('Categories')
+    col3.header('Sub Sub Fields')
 
 # Loading in data 
 main_category = ('','Household Demographic', 'Insurance Behavior', 'Alcohol Behavior', 'Apparel and Jewelry Behavior', 'Automotive Behavior', 
