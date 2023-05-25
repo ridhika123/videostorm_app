@@ -135,80 +135,75 @@ def each_container(count):
             if option2:
                 if option1 == "Household Demographic":
                     option3 = st.selectbox("And a sub subfield", household_demo[option2].dropna(), key = count)
-                    # count += 1
                     # st.dataframe(household_demo[option2].dropna())
                 elif option1 == "Insurance Behavior":
                     option3 = st.selectbox("And a sub subfield", insurance_behavior[option2].dropna(), key = count)
-                    # count += 1
                     # st.dataframe(insurance_behavior[option2].dropna())
                 elif option1 == "Alcohol Behavior":
                     option3 = st.selectbox("And a sub subfield", alcohol_behavior[option2].dropna(), key = count)
-                    # count += 1
                     # st.table(alcohol_behavior[option2].dropna())
                 elif option1 == "Apparel and Jewelry Behavior":
                     option3 = st.selectbox("And a sub subfield", apparel_and_jewelry[option2].dropna(), key = count)
-                    # count += 1
                     # st.table(apparel_and_jewelry[option2].dropna())
                 elif option1 == "Automotive Behavior":
                     option3 = st.selectbox("And a sub subfield", automative_behavior[option2].dropna(), key = count)
-                    # count += 1
                     # st.table(automative_behavior[option2].dropna())
                 elif option1 == "Commuting Behavior":
-                    option3 = st.selectbox("And a sub subfield", commuting[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", commuting[option2].dropna(), key = count)
                     # st.table(commuting[option2].dropna())
                 elif option1 == "Video Consumption Behavior":
-                    option3 = st.selectbox("And a sub subfield", videos[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", videos[option2].dropna(), key = count)
                     # st.table(videos[option2].dropna())
                 elif option1 == "Environment-related Behavior":
-                    option3 = st.selectbox("And a sub subfield", environment[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", environment[option2].dropna(), key = count)
                     # st.table(environment[option2].dropna())
                 elif option1 == "Financial Behavior":
-                    option3 = st.selectbox("And a sub subfield", financial[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", financial[option2].dropna(), key = count)
                     # st.table(financial[option2].dropna())
                 elif option1 == "Food and Beverages Behavior":
-                    option3 = st.selectbox("And a sub subfield", food_and_beverages[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", food_and_beverages[option2].dropna(), key = count)
                     # st.table(food_and_beverages[option2].dropna())
                 elif option1 == "Health Behavior":
-                    option3 = st.selectbox("And a sub subfield", health[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", health[option2].dropna(), key = count)
                     # st.table(health[option2].dropna())
                 elif option1 == "Home Improvement Behavior":
-                    option3 = st.selectbox("And a sub subfield", home_improvement[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", home_improvement[option2].dropna(), key = count)
                     # st.table(home_improvement[option2].dropna())
                 elif option1 == "Items in Home":
-                    option3 = st.selectbox("And a sub subfield", home_items[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", home_items[option2].dropna(), key = count)
                     # st.table(home_items[option2].dropna())
                 elif option1 == "Magazines and Newspaper Behavior":
-                    option3 = st.selectbox("And a sub subfield", magazine_newspaper[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", magazine_newspaper[option2].dropna(), key = count)
                     # st.table(magazine_newspaper[option2].dropna())
                 elif option1 == "Voting Behavior":
-                    option3 = st.selectbox("And a sub subfield", voting[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", voting[option2].dropna(), key = count)
                     # st.table(voting[option2].dropna())
                 elif option1 == "Travel Behavior":
-                    option3 = st.selectbox("And a sub subfield", travel[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", travel[option2].dropna(), key = count)
                     # st.table(travel[option2].dropna())
                 elif option1 == "Print Media Usage & Alternative Advertising":
-                    option3 = st.selectbox("And a sub subfield", advertising[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", advertising[option2].dropna(), key = count)
                     # st.table(advertising[option2].dropna())
                 elif option1 == "Neighborhood Demographics":
-                    option3 = st.selectbox("And a sub subfield", neighborhood[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", neighborhood[option2].dropna(), key = count)
                     # st.table(neighborhood[option2].dropna())
                 elif option1 == "Psychographics":
-                    option3 = st.selectbox("And a sub subfield", psychographics[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", psychographics[option2].dropna(), key = count)
                     # st.table(psychographics[option2].dropna())
                 elif option1 == "Radio Behavior":
-                    option3 = st.selectbox("And a sub subfield", radio[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", radio[option2].dropna(), key = count)
                     # st.table(radio[option2].dropna())
                 elif option1 == "Restaurants Behavior":
-                    option3 = st.selectbox("And a sub subfield", restaurants[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", restaurants[option2].dropna(), key = count)
                     # st.table(restaurants[option2].dropna())
                 elif option1 == "Retail Shopping Behavior":
-                    option3 = st.selectbox("And a sub subfield", shopping[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", shopping[option2].dropna(), key = count)
                     # st.table(shopping[option2].dropna())
                 elif option1 == "Sports and Leisure Behavior":
-                    option3 = st.selectbox("And a sub subfield", sports[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", sports[option2].dropna(), key = count)
                     # st.table(sports[option2].dropna())
                 elif option1 == "Telecommunications Behavior":
-                    option3 = st.selectbox("And a sub subfield", telecom[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", telecom[option2].dropna(), key = count)
                     # st.table(telecom[option2].dropna())
                 count += 1
 
