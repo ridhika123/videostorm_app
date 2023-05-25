@@ -135,7 +135,6 @@ def each_container(count):
             if option2:
                 if option1 == "Household Demographic":
                     option3 = st.selectbox(option2, household_demo[option2].dropna())
-                    st.write("You selected:", option1, option2, option3)
                     # st.dataframe(household_demo[option2].dropna())
                 elif option1 == "Insurance Behavior":
                     st.dataframe(insurance_behavior[option2].dropna())
@@ -183,6 +182,7 @@ def each_container(count):
                     st.table(sports[option2].dropna())
                 elif option1 == "Telecommunications Behavior":
                     st.table(telecom[option2].dropna())
+                st.write("You selected:", option1, option2, option3)
 
         add_field = st.checkbox('Add another field?', key = count)
         count += 1
