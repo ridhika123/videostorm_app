@@ -134,7 +134,8 @@ def each_container(count):
         with col3: 
             if option2:
                 if option1 == "Household Demographic":
-                    option3 = st.selectbox("And a sub subfield", household_demo[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", household_demo[option2].dropna(), key = count)
+                    count += 1
                     # st.dataframe(household_demo[option2].dropna())
                 elif option1 == "Insurance Behavior":
                     option3 = st.selectbox("And a sub subfield", insurance_behavior[option2].dropna())
