@@ -183,9 +183,11 @@ def each_container(count):
                 elif option1 == "Telecommunications Behavior":
                     st.table(telecom[option2].dropna())
 
-        st.write("You selected Main Field:", option1)
-        st.write("Sub Field:", option2)
-        st.write("Sub Sub Field:", option3)
+        if option3:
+            st.write("You selected Main Field:", option1)
+            st.write("Sub Field:", option2)
+            st.write("Sub Sub Field:", option3)
+        
         add_field = st.checkbox('Add another field?', key = count)
         count += 1
     
