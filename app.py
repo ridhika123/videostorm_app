@@ -135,19 +135,23 @@ def each_container(count):
             if option2:
                 if option1 == "Household Demographic":
                     option3 = st.selectbox("And a sub subfield", household_demo[option2].dropna(), key = count)
-                    count += 1
+                    # count += 1
                     # st.dataframe(household_demo[option2].dropna())
                 elif option1 == "Insurance Behavior":
-                    option3 = st.selectbox("And a sub subfield", insurance_behavior[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", insurance_behavior[option2].dropna(), key = count)
+                    # count += 1
                     # st.dataframe(insurance_behavior[option2].dropna())
                 elif option1 == "Alcohol Behavior":
-                    option3 = st.selectbox("And a sub subfield", alcohol_behavior[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", alcohol_behavior[option2].dropna(), key = count)
+                    # count += 1
                     # st.table(alcohol_behavior[option2].dropna())
                 elif option1 == "Apparel and Jewelry Behavior":
-                    option3 = st.selectbox("And a sub subfield", apparel_and_jewelry[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", apparel_and_jewelry[option2].dropna(), key = count)
+                    # count += 1
                     # st.table(apparel_and_jewelry[option2].dropna())
                 elif option1 == "Automotive Behavior":
-                    option3 = st.selectbox("And a sub subfield", automative_behavior[option2].dropna())
+                    option3 = st.selectbox("And a sub subfield", automative_behavior[option2].dropna(), key = count)
+                    # count += 1
                     # st.table(automative_behavior[option2].dropna())
                 elif option1 == "Commuting Behavior":
                     option3 = st.selectbox("And a sub subfield", commuting[option2].dropna())
@@ -206,6 +210,7 @@ def each_container(count):
                 elif option1 == "Telecommunications Behavior":
                     option3 = st.selectbox("And a sub subfield", telecom[option2].dropna())
                     # st.table(telecom[option2].dropna())
+                count += 1
 
         if option1:
             st.write("You selected Main Field:", option1)
