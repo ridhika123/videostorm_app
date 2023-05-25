@@ -206,7 +206,7 @@ def each_container(count):
                     option3 = st.selectbox("And a sub subfield", telecom[option2].dropna())
                     # st.table(telecom[option2].dropna())
 
-        if option3:
+        if option1:
             st.write("You selected Main Field:", option1)
             st.write("Sub Field:", option2)
             st.write("Sub Sub Field:", option3)
