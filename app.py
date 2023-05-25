@@ -137,50 +137,73 @@ def each_container(count):
                     option3 = st.selectbox(option2, household_demo[option2].dropna())
                     # st.dataframe(household_demo[option2].dropna())
                 elif option1 == "Insurance Behavior":
-                    st.dataframe(insurance_behavior[option2].dropna())
+                    option3 = st.selectbox(option2, insurance_behavior[option2].dropna())
+                    # st.dataframe(insurance_behavior[option2].dropna())
                 elif option1 == "Alcohol Behavior":
-                    st.table(alcohol_behavior[option2].dropna())
+                    option3 = st.selectbox(option2, alcohol_behavior[option2].dropna())
+                    # st.table(alcohol_behavior[option2].dropna())
                 elif option1 == "Apparel and Jewelry Behavior":
-                    st.table(apparel_and_jewelry[option2].dropna())
+                    option3 = st.selectbox(option2, apparel_and_jewelry[option2].dropna())
+                    # st.table(apparel_and_jewelry[option2].dropna())
                 elif option1 == "Automotive Behavior":
-                    st.table(automative_behavior[option2].dropna())
+                    option3 = st.selectbox(option2, automative_behavior[option2].dropna())
+                    # st.table(automative_behavior[option2].dropna())
                 elif option1 == "Commuting Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(commuting[option2].dropna())
                 elif option1 == "Video Consumption Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(videos[option2].dropna())
                 elif option1 == "Environment-related Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(environment[option2].dropna())
                 elif option1 == "Financial Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(financial[option2].dropna())
                 elif option1 == "Food and Beverages Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(food_and_beverages[option2].dropna())
                 elif option1 == "Health Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(health[option2].dropna())
                 elif option1 == "Home Improvement Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(home_improvement[option2].dropna())
                 elif option1 == "Items in Home":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(home_items[option2].dropna())
                 elif option1 == "Magazines and Newspaper Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(magazine_newspaper[option2].dropna())
                 elif option1 == "Voting Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(voting[option2].dropna())
                 elif option1 == "Travel Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(travel[option2].dropna())
                 elif option1 == "Print Media Usage & Alternative Advertising":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(advertising[option2].dropna())
                 elif option1 == "Neighborhood Demographics":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(neighborhood[option2].dropna())
                 elif option1 == "Psychographics":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(psychographics[option2].dropna())
                 elif option1 == "Radio Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(radio[option2].dropna())
                 elif option1 == "Restaurants Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(restaurants[option2].dropna())
                 elif option1 == "Retail Shopping Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(shopping[option2].dropna())
                 elif option1 == "Sports and Leisure Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(sports[option2].dropna())
                 elif option1 == "Telecommunications Behavior":
+                    option3 = st.selectbox(option2, household_demo[option2].dropna())
                     st.table(telecom[option2].dropna())
 
         if option3:
